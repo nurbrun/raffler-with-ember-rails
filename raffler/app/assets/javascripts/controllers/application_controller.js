@@ -1,7 +1,12 @@
 Raffler.ApplicationController = Ember.Controller.extend({
+    
+    entries: [],
+
     actions: {
         addEntry: function() {
-	    alert(this.get('newEntryName'));
+	    this.entries.pushObject({
+      name: this.get('newEntryName')
+    });
 	    return this.set('newEntryName', "");
 		}
     }
