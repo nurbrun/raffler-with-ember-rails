@@ -13,4 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require ember
+//= require ember-data
+//= require active-model-adapter
+//= require_self
+//= require raffler
+
+Raffler = Ember.Application.create()
