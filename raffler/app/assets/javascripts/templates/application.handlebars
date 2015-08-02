@@ -2,11 +2,6 @@
 	<h1>Raffler Baffler</h1>
 	<!-- depricated method -->
 	<!-- {{view Ember.TextField valueBinding="newEntryName"}} -->
-	{{input valueBinding="newEntryName" action="addEntry"}}
-	{{newEntryName}}
-	<ul>
-		{{#each entries as |entry|}}
-		<li>{{entry.name}}</li>
-		{{/each}}
-	</ul>
+	{{outlet}}
+	{{!-- works like yield in rails. renders out template and controller based on route --}}
 </div>

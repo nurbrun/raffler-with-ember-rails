@@ -1,5 +1,7 @@
-# For more information see: http://emberjs.com/guides/routing/
+
 
 Raffler.Router.map ()->
-  # @resource('posts')
+	@resource 'entries', { path: '/' }, ->
 
+Raffler.EntriesRoute = Ember.Route.extend
+	setupController: (controller) -> controller.set('entries', [])

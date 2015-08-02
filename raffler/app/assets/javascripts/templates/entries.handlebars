@@ -1,0 +1,13 @@
+{{input valueBinding="newEntryName" action="addEntry"}}
+{{newEntryName}}
+<ul>
+	{{#each entries as |entry|}}
+	<li>
+	{{entry.name}}
+	{{#if winner}}
+		<span class="winner">Winner</span>
+	{{/if}}
+	</li>
+	{{/each}}
+</ul>
+<button {{action 'drawWinner'}}>Draw Winner</button>
